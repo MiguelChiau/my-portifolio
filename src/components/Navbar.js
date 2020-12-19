@@ -28,7 +28,7 @@ import MobileMenuSlider from "@material-ui/core/Drawer"
 const useStyles = makeStyles(theme=>({
     menuSliderContainer: {
         width: "100%",
-        background: "#511",
+        background: "#222",
         height: "100%"
     },
 
@@ -99,7 +99,7 @@ export const Navbar = () => {
     return (
         <>
         <Box component="nav">
-            <AppBar position="static" style={{background: "#222"}}>
+            <AppBar position="sticky" style={{background: "#222", position: "fixed"}}>
                 <Toolbar>
                     <IconButton onClick={toggleSlider("right", true)}>
                     <ArrowBack style={{color: "tomato"}}/>

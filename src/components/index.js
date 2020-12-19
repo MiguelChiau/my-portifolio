@@ -13,12 +13,14 @@ const useStyles = makeStyles({
         position: "absolute",
         color: "red"
     }
+
+   
 })
 const Home = () => {
 
     const classes = useStyles()
     return (
-        <Box className={classes.main}>
+        <Box>
             <Navbar/>
             <Header/>
             <Particles
@@ -26,16 +28,29 @@ const Home = () => {
             params={{
                 particles: {
                     number: {
-                        value: 450
+                        value: 250,
+                         density: {
+	                       enable: true,
+	                       value_area: 2000
+	                    }
                     },
-                    color: {
-                    value: "red"
+                    line_linked: {
+                        enable: true,
+	                    opacity: 0.4
+                    },
+                    shape: {
+                        type: "circle",
+                        stroke: {
+                            width: 1,
+                            color: "tomato"
+                        }
                     }
                 }
             }}
 
             style={{color: "red"}}
             />
+            
         </Box>
     )
 }
