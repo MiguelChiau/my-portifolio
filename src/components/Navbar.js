@@ -24,6 +24,9 @@ import avatar from "../images/avatar.JPG"
 import {makeStyles} from "@material-ui/core/styles"
 import MobileMenuSlider from "@material-ui/core/Drawer"
 
+import {Link} from "react-router-dom"
+import Footer from "./Footer"
+
 //Styles using material ui
 const useStyles = makeStyles(theme=>({
     menuSliderContainer: {
@@ -48,19 +51,26 @@ const useStyles = makeStyles(theme=>({
 const menuItems = [
     {
         ListIcon: <Home/>,
-        ListText: "Home"
+        ListText: "Home",
+        listPath: "/"
     },
     {
         ListIcon: <AssignmentInd/>,
-        ListText: "Resume"
+        ListText: "Resume",
+        ListPath: "/resume"
+
     },
     {
         ListIcon: <Apps/>,
-        ListText: "Portfolio"
+        ListText: "Portfolio",
+        // listPath: "/portfolio"
+
     },
     {
         ListIcon: <ContactMail/>,
         ListText: "Contact me"
+        // listPath: "/contact-me"
+
     }
 ]
 
@@ -80,9 +90,9 @@ export const Navbar = () => {
             <Avatar className={classes.avatar} src={avatar} alt=""/>
             <Divider/>
             <List>
-                {/* //Now to map the manu items */}
+                {/* //Now to map the menu items */}
                 {menuItems.map((lsItem, key) =>(
-                    <ListItem button key>
+                    <ListItem button key={key} component={Link} to={lsItem.ListPath}>
                     <ListItemIcon className={classes.ListItem}>
                         {lsItem.ListIcon}
                     </ListItemIcon>
@@ -108,6 +118,7 @@ export const Navbar = () => {
                     <Typography variant="h5" style={{color: "tan"}}>Portfolio</Typography>
                     <MobileMenuSlider anchor="right" open={state.right} onClose={toggleSlider("right", false)}>
                         {sideList("right")}
+                        <Footer/>
                     </MobileMenuSlider>
                 </Toolbar>
             </AppBar>
