@@ -2,6 +2,9 @@ import React from 'react'
 import {Typography, Avatar, Grid, Box} from "@material-ui/core"
 // import avatar from "../images/avatar.JPG"
 import avatar from "../images/prof.jpg"
+import Button from '@material-ui/core/Button';
+import myResume from "../MiguelChiauResume.pdf"
+
 
 import Typed from "react-typed"
 import {makeStyles} from "@material-ui/core/styles"
@@ -53,6 +56,17 @@ const Header = () => {
                 backSpeed={60}
                 loop/>
             </Typography>
+
+             <Button variant="contained" 
+             style={{backgroundColor: "tomato", 
+             color: "tan", 
+             boxShadow: "5px 10px 18px #888888", 
+             fontWeight: "bold"}} 
+             disableElevation
+             target="_blank" href={myResume}
+             >
+               Download my CV
+              </Button>
         </Box>
     )
 }

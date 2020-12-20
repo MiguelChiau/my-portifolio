@@ -18,11 +18,14 @@ ArrowBack,
 AssignmentInd,
 Home,
 Apps,
-ContactMail
+ContactMail,
+Info
 } from "@material-ui/icons"
 import avatar from "../images/avatar.JPG"
 import {makeStyles} from "@material-ui/core/styles"
 import MobileMenuSlider from "@material-ui/core/Drawer"
+import myResume from "../MiguelChiauResume.pdf"
+
 
 import {Link} from "react-router-dom"
 import Footer from "./Footer"
@@ -50,15 +53,9 @@ const useStyles = makeStyles(theme=>({
 
 const menuItems = [
     {
-        ListIcon: <Home/>,
-        ListText: "Home",
+        ListIcon: <Info/>,
+        ListText: "About",
         listPath: "/"
-    },
-    {
-        ListIcon: <AssignmentInd/>,
-        ListText: "Resume",
-        ListPath: "/resume"
-
     },
     {
         ListIcon: <Apps/>,
@@ -68,7 +65,7 @@ const menuItems = [
     },
     {
         ListIcon: <ContactMail/>,
-        ListText: "Contact me"
+        ListText: "Contacts"
         // listPath: "/contact-me"
 
     }
@@ -90,8 +87,8 @@ export const Navbar = () => {
             <Avatar className={classes.avatar} src={avatar} alt=""/>
             <Divider/>
             <List>
-                {/* //Now to map the menu items */}
-                {menuItems.map((lsItem, key) =>(
+
+                 {/* {menuItems.map((lsItem, key) =>(
                     <ListItem button key={key} component={Link} to={lsItem.ListPath}>
                     <ListItemIcon className={classes.ListItem}>
                         {lsItem.ListIcon}
@@ -100,7 +97,39 @@ export const Navbar = () => {
                 </ListItem>
 
 
-                ))}
+                ))} */}
+
+                 <ListItem button component={Link} to="/">
+                    <ListItemIcon className={classes.ListItem}>
+                        <Home/>
+                    </ListItemIcon>
+                    <ListItemText className={classes.ListItem} primary="Home"/>
+                </ListItem>
+
+                 <ListItem button component={Link} to="/about">
+                    <ListItemIcon className={classes.ListItem}>
+                        <Info/>
+                    </ListItemIcon>
+                    <ListItemText className={classes.ListItem} primary="About"/>
+                </ListItem>
+
+
+                <ListItem button >
+                    <ListItemIcon className={classes.ListItem}>
+                        <Apps/>
+                    </ListItemIcon>
+                    <ListItemText className={classes.ListItem} primary="Portfolio"/>
+                </ListItem>
+
+                <ListItem button >
+                    <ListItemIcon className={classes.ListItem}>
+                        <ContactMail/>
+                    </ListItemIcon>
+                    <ListItemText className={classes.ListItem} primary="Contact me"/>
+                </ListItem>
+
+               
+                
                 
             </List>
         </Box>
