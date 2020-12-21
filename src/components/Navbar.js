@@ -25,6 +25,7 @@ import avatar from "../images/avatar.JPG"
 import {makeStyles} from "@material-ui/core/styles"
 import MobileMenuSlider from "@material-ui/core/Drawer"
 import myResume from "../MiguelChiauResume.pdf"
+import Contact from "./Contact"
 
 
 import {Link} from "react-router-dom"
@@ -121,7 +122,7 @@ export const Navbar = () => {
                     <ListItemText className={classes.ListItem} primary="Portfolio"/>
                 </ListItem>
 
-                <ListItem button >
+                <ListItem button component={Link} to="/contact-me">
                     <ListItemIcon className={classes.ListItem}>
                         <ContactMail/>
                     </ListItemIcon>
