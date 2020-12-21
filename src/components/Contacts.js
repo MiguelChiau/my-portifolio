@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import Recaptcha from 'react-recaptcha';
-import {Typography, Link, Checkbox , FormControlLabel, Avatar, TextField, Button, Grid, Box, Paper, ListItem} from "@material-ui/core"
+import {Typography, Divider, Link, Checkbox , FormControlLabel, Avatar, TextField, Button, Grid, Box, Paper, ListItem} from "@material-ui/core"
 import CssBaseline from '@material-ui/core/CssBaseline';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import NavBar from "./Navbar"
+import ContactMailIcon from '@material-ui/icons/ContactMail';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -26,8 +27,18 @@ const useStyles = makeStyles((theme) => ({
   submit: {
     margin: theme.spacing(3, 0, 2),
 
-
   },
+  mainContainer: {
+        background: "#fff",
+        height: "100vh",
+
+
+    },
+    grid: {
+        width: "100%",
+        margin: "0px",
+        // height: "600px",
+    },
 }));
 
 function Copyright() {
@@ -52,6 +63,7 @@ class Contacts extends Component {
     this.recaptchaLoaded = this.recaptchaLoaded.bind(this);
     this.verifyCallback = this.verifyCallback.bind(this);
     this.classes = this.useStyles.bind(this)
+
 //   const classes = useStyles();
 
 
@@ -100,27 +112,33 @@ useStyles = makeStyles((theme) => ({
   },
 }));
 
+
+
   
 
   render() {
     return (
 
- <Container component="main" maxWidth="xs" style={{background: "#fff"}}>
+ <Container  style={{background: "#fff"}}>
          <NavBar style={{position: "fixed", top: "0"}}/>
 
       <CssBaseline />
+      <Grid container spacing={2} style={{textAlign: "center", width: "100%"}}>
+          
+      <Grid item xs={12} md={12} >
       <div className={useStyles.paper} style={{marginTop: "68px"}}>
-        {/* <Avatar className={useStyles.avatar}>
-          <LockOutlinedIcon />
-        </Avatar> */}
+        
         <Typography component="h1" variant="h5" style={{fontWeight: "bold", textAlign: "center"}}>
-           Contact Me
+           Get in Touch
         </Typography>
          <Typography component="h1" variant="h6"style={{textAlign: "center"}} >
            I will get back to you within 24hrs
         </Typography>
         <form className={useStyles.form} noValidate>
-          <TextField
+
+
+
+           <TextField
             variant="outlined"
             margin="normal"
             required
@@ -130,7 +148,7 @@ useStyles = makeStyles((theme) => ({
             name="name"
             autoComplete="name"
             autoFocus
-          />
+          /> 
           <TextField
             variant="outlined"
             margin="normal"
@@ -185,7 +203,7 @@ useStyles = makeStyles((theme) => ({
             style={{marginTop: "10px",
         marginBottom: "10px"}}
           >
-            Submit
+            Send Message
           </Button>
            <Recaptcha
             sitekey="6Ld_Yw8aAAAAAMAFawyxcxgRAVMduy_ylYoHnxTo"
@@ -196,9 +214,41 @@ useStyles = makeStyles((theme) => ({
          
         </form>
       </div>
+      <Grid justify="center">
+          <Paper style={{backgroundColor: "#fff", marginTop: "68px"}}>
+              <Typography  variant="h6" style={{fontWeight: "bold"}}>
+                        More ways to contact me
+             </Typography>
+             <Divider/>
+              <Typography  variant="h6" href="mailto:chiau.miguel@gmail.com">
+                        Email me at: 
+                        <a href="mailto:chiau.miguel@gmail.com">chiau.miguel@gmail.com</a>
+             </Typography>
+              <Typography  variant="h6">
+                        Phone: +1 (672) 999-0650
+             </Typography>
+          </Paper>
+      </Grid>
       <Box mt={8}>
         <Copyright />
       </Box>
+      </Grid>
+
+      {/* <Grid item xs={12} md={6}>
+          <Paper style={{backgroundColor: "#fff", marginTop: "68px"}}>
+              <Typography  variant="h6" style={{fontWeight: "bold"}}>
+                        More ways to get in touch
+             </Typography>
+              <Typography  variant="h6">
+                        Email me at: chiau.miguel@gmail.com
+             </Typography>
+              <Typography  variant="h6">
+                        Phone: +1 (672) 999-0650
+             </Typography>
+          </Paper>
+      </Grid> */}
+      </Grid>
+
     </Container>
 
     );
