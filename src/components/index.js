@@ -6,6 +6,7 @@ import {makeStyles} from "@material-ui/styles"
 import {
 Box
 } from "@material-ui/core"
+import bg from "../images/coffee-apple.jpg"
 
 
 
@@ -24,7 +25,7 @@ const Home = () => {
         <Box>
             <Navbar/>
             <Header/>
-            <Particles
+                <Particles
             canvasClassName={classes.particlesCanva}
             params={{
                 particles: {
@@ -51,6 +52,8 @@ const Home = () => {
 
             style={{color: "red"}}
             />
+
+            
             
         </Box>
     )

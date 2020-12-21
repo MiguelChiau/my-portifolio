@@ -115,7 +115,7 @@ export const Navbar = () => {
                 </ListItem>
 
 
-                <ListItem button >
+                <ListItem button component={Link} to="/contacts">
                     <ListItemIcon className={classes.ListItem}>
                         <Apps/>
                     </ListItemIcon>

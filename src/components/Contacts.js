@@ -1,20 +1,41 @@
 import React, { Component } from 'react';
+import Recaptcha from 'react-recaptcha';
 import {Typography, Link, Checkbox , FormControlLabel, Avatar, TextField, Button, Grid, Box, Paper, ListItem} from "@material-ui/core"
 import CssBaseline from '@material-ui/core/CssBaseline';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import Recaptcha from "react-recaptcha"
-
-
 import NavBar from "./Navbar"
+
+
+const useStyles = makeStyles((theme) => ({
+  paper: {
+    marginTop: theme.spacing(8),
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+  avatar: {
+    margin: theme.spacing(1),
+    backgroundColor: theme.palette.secondary.main,
+  },
+  form: {
+    width: '100%', 
+    marginTop: theme.spacing(1),
+  },
+  submit: {
+    margin: theme.spacing(3, 0, 2),
+
+
+  },
+}));
 
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+        Miguel Chiau
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -22,7 +43,44 @@ function Copyright() {
   );
 }
 
-const useStyles = makeStyles((theme) => ({
+
+class Contacts extends Component {
+  constructor(props) {
+    super(props)
+
+    this.handleSubscribe = this.handleSubscribe.bind(this);
+    this.recaptchaLoaded = this.recaptchaLoaded.bind(this);
+    this.verifyCallback = this.verifyCallback.bind(this);
+    this.classes = this.useStyles.bind(this)
+//   const classes = useStyles();
+
+
+    this.state = {
+      isVerified: false
+    }
+  }
+
+  recaptchaLoaded() {
+    console.log('capcha successfully loaded');
+  }
+
+  handleSubscribe() {
+    if (this.state.isVerified) {
+      alert('You have successfully subscribed!');
+    } else {
+      alert('Please verify that you are a human!');
+    }
+  }
+
+  verifyCallback(response) {
+    if (response) {
+      this.setState({
+        isVerified: true
+      })
+    }
+  }
+
+useStyles = makeStyles((theme) => ({
   paper: {
     marginTop: theme.spacing(8),
     display: 'flex',
@@ -42,26 +100,26 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+  
 
-const Contact = () => {
-  const classes = useStyles();
+  render() {
+    return (
 
-  return (
-    <Container component="main" maxWidth="xs" style={{background: "#fff"}}>
+ <Container component="main" maxWidth="xs" style={{background: "#fff"}}>
          <NavBar style={{position: "fixed", top: "0"}}/>
 
       <CssBaseline />
-      <div className={classes.paper} >
-        <Avatar className={classes.avatar}>
+      <div className={useStyles.paper} style={{marginTop: "68px"}}>
+        {/* <Avatar className={useStyles.avatar}>
           <LockOutlinedIcon />
-        </Avatar>
-        <Typography component="h1" variant="h5" style={{fontWeight: "bold"}}>
+        </Avatar> */}
+        <Typography component="h1" variant="h5" style={{fontWeight: "bold", textAlign: "center"}}>
            Contact Me
         </Typography>
-         <Typography component="h1" variant="h6" >
-           I will bet back to you within 24hrs
+         <Typography component="h1" variant="h6"style={{textAlign: "center"}} >
+           I will get back to you within 24hrs
         </Typography>
-        <form className={classes.form} noValidate>
+        <form className={useStyles.form} noValidate>
           <TextField
             variant="outlined"
             margin="normal"
@@ -114,20 +172,27 @@ const Contact = () => {
           fullWidth
           rows={6}
         />
-          <FormControlLabel
-            control={<Checkbox value="remember" color="primary" />}
-            label="Remember me"
-          />
+        
+
+          
           <Button
             type="submit"
             fullWidth
             variant="contained"
             color="primary"
-            className={classes.submit}
-            // onClick={this.handleSubmit}
+            className={useStyles.submit}
+            onClick={this.handleSubmit}
+            style={{marginTop: "10px",
+        marginBottom: "10px"}}
           >
             Submit
           </Button>
+           <Recaptcha
+            sitekey="6Ld_Yw8aAAAAAMAFawyxcxgRAVMduy_ylYoHnxTo"
+            render="explicit"
+            onloadCallback={this.recaptchaLoaded}
+            verifyCallback={this.verifyCallback}
+          />
          
         </form>
       </div>
@@ -135,12 +200,9 @@ const Contact = () => {
         <Copyright />
       </Box>
     </Container>
-  );
+
+    );
+  }
 }
 
-export default  Contact
-
-
-// https://joshembling.co.uk/#home
-// https://sebkay.com/services/
-// https://www.youtube.com/watch?v=RKj3OjgftXc
+export default Contacts;
