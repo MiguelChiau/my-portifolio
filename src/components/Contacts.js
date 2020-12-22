@@ -200,26 +200,21 @@ handleSubmit = (e) => {
            <TextField
             variant="outlined"
             margin="normal"
-            required
             fullWidth
             id="name"
             label="Name"
             name="name"
-            // autoComplete="name"
             autoFocus
             value={this.state.name}
             onChange={this.handleChangeName}
-                // {this.state.name.target.value}}
           /> 
           <TextField
             variant="outlined"
             margin="normal"
-            required
             fullWidth
             id="email"
             label="Email Address"
             name="email"
-            // autoComplete="email"
             autoFocus
             value={this.state.email}
             onChange={this.handleChangeEmail}
@@ -231,7 +226,6 @@ handleSubmit = (e) => {
             id="phone"
             label="Phone Number"
             name="phone"
-            // autoComplete="phone"
             autoFocus
             value={this.state.phone}
             onChange={this.handleChangePhone}
@@ -244,7 +238,6 @@ handleSubmit = (e) => {
             label="Subject"
             type="subject"
             id="subject"
-            // autoComplete="subject"
             value={this.state.subject}
             onChange={this.handleChangeSubject}
           />
