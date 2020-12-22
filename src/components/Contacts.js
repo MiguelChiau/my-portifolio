@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import Recaptcha from 'react-recaptcha';
 import {Typography, Divider, Link, Checkbox , FormControlLabel, Avatar, TextField, Button, Grid, Box, Paper, ListItem} from "@material-ui/core"
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -7,6 +7,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import NavBar from "./Navbar"
 import ContactMailIcon from '@material-ui/icons/ContactMail';
+
+import {db} from "./firebase"
 
 
 const useStyles = makeStyles((theme) => ({
@@ -64,13 +66,46 @@ class Contacts extends Component {
     this.verifyCallback = this.verifyCallback.bind(this);
     this.classes = this.useStyles.bind(this)
 
-//   const classes = useStyles();
-
-
     this.state = {
       isVerified: false
     }
+
+    this.state = {
+        name: "",
+        email: "",
+        phone: "",
+        subject: "",
+        message: "",
+    }
   }
+
+  handleChangeName = (e) => {
+      this.setState({
+          name: e.target.value
+      })
+  }
+  handleChangeEmail = (e) => {
+      this.setState({
+          email: e.target.value
+      })
+  }
+  handleChangePhone = (e) => {
+      this.setState({
+          phone: e.target.value
+      })
+  }
+  handleChangeSubject = (e) => {
+      this.setState({
+          subject: e.target.value
+      })
+  }
+  handleChangeMessage = (e) => {
+      this.setState({
+        message: e.target.value
+      })
+  }
+
+
 
   recaptchaLoaded() {
     console.log('capcha successfully loaded');
@@ -112,6 +147,30 @@ useStyles = makeStyles((theme) => ({
   },
 }));
 
+handleSubmit = (e) => {
+   e.preventDefault()
+
+   db.collection('contacts').add({
+       name: this.state.name,
+       email: this.state.email,
+       phone: this.state.phone,
+       subject: this.state.subject,
+       message: this.state.message
+   })
+   .then(() => {
+       alert("You message has been submitted!")
+   })
+   .catch((error) => {
+       alert(error.message + "Opps")
+
+   })
+
+//    To test what we collect
+// alert(`${this.state.name} ${this.state.email} ${this.state.phone} ${this.state.phone} ${this.state.message}`)
+
+}
+
+
 
 
   
@@ -134,7 +193,7 @@ useStyles = makeStyles((theme) => ({
          <Typography component="h1" variant="h6"style={{textAlign: "center"}} >
            I will get back to you within 24hrs
         </Typography>
-        <form className={useStyles.form} noValidate>
+        <form className={useStyles.form} noValidate onSubmit={this.handleSubmit}>
 
 
 
@@ -146,8 +205,11 @@ useStyles = makeStyles((theme) => ({
             id="name"
             label="Name"
             name="name"
-            autoComplete="name"
+            // autoComplete="name"
             autoFocus
+            value={this.state.name}
+            onChange={this.handleChangeName}
+                // {this.state.name.target.value}}
           /> 
           <TextField
             variant="outlined"
@@ -157,8 +219,10 @@ useStyles = makeStyles((theme) => ({
             id="email"
             label="Email Address"
             name="email"
-            autoComplete="email"
+            // autoComplete="email"
             autoFocus
+            value={this.state.email}
+            onChange={this.handleChangeEmail}
           />
           <TextField
             variant="outlined"
@@ -167,8 +231,10 @@ useStyles = makeStyles((theme) => ({
             id="phone"
             label="Phone Number"
             name="phone"
-            autoComplete="phone"
+            // autoComplete="phone"
             autoFocus
+            value={this.state.phone}
+            onChange={this.handleChangePhone}
           />
           <TextField
             variant="outlined"
@@ -178,7 +244,9 @@ useStyles = makeStyles((theme) => ({
             label="Subject"
             type="subject"
             id="subject"
-            autoComplete="subject"
+            // autoComplete="subject"
+            value={this.state.subject}
+            onChange={this.handleChangeSubject}
           />
          
           <TextField
@@ -189,6 +257,8 @@ useStyles = makeStyles((theme) => ({
           multiline
           fullWidth
           rows={6}
+          value={this.state.message}
+          onChange={this.handleChangeMessage}
         />
         
 
@@ -201,10 +271,11 @@ useStyles = makeStyles((theme) => ({
             className={useStyles.submit}
             onClick={this.handleSubmit}
             style={{marginTop: "10px",
-        marginBottom: "10px"}}
+            marginBottom: "10px"}}
           >
             Send Message
           </Button>
+
            <Recaptcha
             sitekey="6Ld_Yw8aAAAAAMAFawyxcxgRAVMduy_ylYoHnxTo"
             render="explicit"
@@ -234,19 +305,7 @@ useStyles = makeStyles((theme) => ({
       </Box>
       </Grid>
 
-      {/* <Grid item xs={12} md={6}>
-          <Paper style={{backgroundColor: "#fff", marginTop: "68px"}}>
-              <Typography  variant="h6" style={{fontWeight: "bold"}}>
-                        More ways to get in touch
-             </Typography>
-              <Typography  variant="h6">
-                        Email me at: chiau.miguel@gmail.com
-             </Typography>
-              <Typography  variant="h6">
-                        Phone: +1 (672) 999-0650
-             </Typography>
-          </Paper>
-      </Grid> */}
+    
       </Grid>
 
     </Container>
