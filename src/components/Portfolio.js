@@ -1,4 +1,4 @@
-import React from 'react';
+import {React, useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -8,6 +8,12 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import ComputerIcon from '@material-ui/icons/Computer';
+import Popup from "./Popup"
+import {Link} from "react-router-dom"
+
+
 
 import NavBar from "./Navbar"
 import pg from "../images/net.jpg"
@@ -36,8 +42,18 @@ const useStyles = makeStyles((theme) => ({
 
   innerGrid:{
     background: "#fff"
-}
+},
 
+projectsIcons: {
+  paddingRight: "5px"
+},
+
+field: {
+  backgroundColor: "#f1f1f1",
+  '&:hover': {
+       backgroundColor: "tomato",
+    },
+}
 })
 )
 
@@ -64,8 +80,15 @@ const portfolioItems = [
   }
 ]
 
+
+
+
  const Portfolio = () => {
   const classes = useStyles();
+
+  //The Modal
+const [openPopup, setOpenPopup] = useState(false)
+
 
   return (
     <>
@@ -101,12 +124,15 @@ const portfolioItems = [
           </CardContent>
       </CardActionArea>
 
-      <CardActions>
-        <Button size="small" color="primary">
+      <CardActions >
+        <Button size="small" color="primary" className={classes.field}
+        onClick = {() => setOpenPopup(true)}
+        >
+          {/* <ComputerIcon className={classes.projectsIcons} /> */}
           Demo
         </Button>
-        <Button size="small" color="primary">
-          Learn More
+        <Button size="small" color="primary"  className={classes.field}>
+          <GitHubIcon className={classes.projectsIcons} /> Source Code
         </Button>
       </CardActions>
 
@@ -118,6 +144,13 @@ const portfolioItems = [
 
     </Grid>
     </Grid>
+
+    <Popup
+    openPopup={openPopup}
+    setOpenPopup={setOpenPopup}
+    >
+
+    </Popup>
 
     </>
   );
