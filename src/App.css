@@ -1,5 +1,6 @@
 body {
-  background: url("./images/coffee-apple.jpg") no-repeat center center fixed;
+  /* background: url("./images/coffee-apple.jpg") no-repeat center center fixed; */
+  background-color: #1e242a;
 
   -webkit-background: cover;
   -moz-background: cover;

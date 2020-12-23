@@ -22,7 +22,10 @@ const useStyles = withStyles({
             fontSize: "1.8rem",
             }
         },
-    }
+
+        
+
+    },
 
 })
 
@@ -30,7 +33,7 @@ const Footer = () => {
     const classes = withStyles()
     
     return (
-        <BottomNavigation width="auto" style={{background: "tomato"}}>
+        <BottomNavigation width="auto" style={{background: "#666666"}}>
              <BottomNavigationAction className={classes.root} 
             style={{padding: "0", color: "#fff"}} 
             icon={<GitHubIcon/>}
@@ -49,7 +52,8 @@ const Footer = () => {
 
             <BottomNavigationAction className={classes.root} 
             style={{padding: "0", color: "#fff"}} 
-            icon={<EmailIcon/>}
+            icon={<EmailIcon className={classes.footerIcons} />}
+
             href="mailto:chiau.miguel@gmail.com"
             />
 

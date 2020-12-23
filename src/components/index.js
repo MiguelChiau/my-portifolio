@@ -12,8 +12,7 @@ import bg from "../images/coffee-apple.jpg"
 
 const useStyles = makeStyles({
     particlesCanva: {
-        position: "absolute",
-        color: "red"
+        position: "relative",
     }
 
    
@@ -25,7 +24,7 @@ const Home = () => {
         <Box>
             <Navbar/>
             <Header/>
-                <Particles
+                {/* <Particles
             canvasClassName={classes.particlesCanva}
             params={{
                 particles: {
@@ -50,8 +49,8 @@ const Home = () => {
                 }
             }}
 
-            style={{color: "red"}}
-            />
+            /> */}
+
 
             
             

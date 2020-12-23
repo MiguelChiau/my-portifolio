@@ -22,14 +22,21 @@ import pg from "../images/net.jpg"
 
 import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles({
-//   root: {
-//     maxWidth: 345,
-//   },
+const useStyles = makeStyles((theme) => ({
+
   media: {
     height: 140,
   },
-});
+  closeButton: {
+    color: "#0000FF",
+    fontWeight: "bold",
+    '&:hover': {
+       color: "tomato",
+
+    },
+
+  }
+}))
 
 
 
@@ -37,66 +44,47 @@ function Popup(props) {
 
 const classes = useStyles();
 
-    const {title, children, openPopup, setOpenPopu} = props
+    const {openPopup, setOpenPopup} = props
 
-    // const VideoSRC = demo
 
     return (
         <Dialog open={openPopup}>
-                 <CloseIcon />
-
-            {/* <DialogTitle>
-                This is the title
-
-            </DialogTitle>
-            <DialogContent>
-                Bla bla bla jb/lraw
-                Let Google help apps determine location. This means sending anonymous location data to
-            Google, even when no apps are running.
-
-            </DialogContent> */}
+            <div style={{display: "flex"}}>
+            <CloseIcon className={classes.closeButton} style={{flexGrow: 3 }}
+            onClick = {() => {setOpenPopup(false)}}
+            />
+            </div>
 
             <Card className={classes.root}>
-      <CardActionArea>
-        {/* <CardMedia
-          className={classes.media}
-          image="/static/images/cards/contemplative-reptile.jpg"
-          title="Contemplative Reptile"
-        /> */}
+              <CardActionArea>
+                 <CardMedia>
+                     <video autoPlay loop muted style={{width:"100%"}}>
+                         <source src={demo} type="video/mp4"/>
+                    </video>
+                 </CardMedia>
 
-        <CardMedia>
+                 <CardContent>
+                     <Typography gutterBottom variant="h5" component="h2">
+                          Lizard
+                     </Typography>
+                     <Typography variant="body2" color="textSecondary" component="p">
+                         Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+                         across all continents except Antarctica
+                     </Typography>
+                </CardContent>
+             </CardActionArea>
 
-            <video autoPlay loop muted width="500"
-            height="400" style={{marginLeft: "20px"}}>
-                <source src={demo} type="video/mp4"/>
-            </video>
+            <CardActions>
+                   <Button size="small" color="primary">
+                       <ComputerIcon style={{paddingRight: "5px"}} />
+                        View Live Preview
+                   </Button>
+            </CardActions>
 
-        </CardMedia>
+        </Card>
 
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            Lizard
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-            <ComputerIcon style={{paddingRight: "5px"}} />
-          View Live Preview
-        </Button>
-       
-      </CardActions>
-    </Card>
+    </Dialog>
 
-            
-        </Dialog>
-
-    
-     
     )
     }
 

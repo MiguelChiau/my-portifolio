@@ -4,6 +4,7 @@ import {Typography, Avatar, Grid, Box} from "@material-ui/core"
 import avatar from "../images/prof.jpg"
 import Button from '@material-ui/core/Button';
 import myResume from "../MiguelChiauResume.pdf"
+import url from "../images/coffee-apple.jpg"
 
 
 import Typed from "react-typed"
@@ -18,10 +19,15 @@ const useStyles = makeStyles(theme => ({
     },
 
     title: {
-        color: "tomato"
+        // color: "tomato"
+        color: "#396EFF",
+        fontWeight: "bold"
+
     },
     subtitle: {
-        color: "tan",
+        color: "#666666",
+        // color: "#fff",
+
         marginBottom: "3rem"
     },
     typedContainer: {
@@ -32,7 +38,7 @@ const useStyles = makeStyles(theme => ({
         width: "100vw",
         textAlign: "center",
         zIndex: 1,
-        color: "tan"
+        
     }
 
 
@@ -42,7 +48,7 @@ const Header = () => {
 
     const classes = useStyles()
     return (
-        <Box className={classes.typedContainer}>
+        <Box color="primary" className={classes.typedContainer}>
             <Grid container justify="center">
             {/* <Avatar className={classes.avatar} variant="round" src={avatar} alt="Miguel Chiau"/> */}
             </Grid>
@@ -58,7 +64,7 @@ const Header = () => {
             </Typography>
 
              <Button variant="contained" 
-             style={{backgroundColor: "tomato", 
+             style={{backgroundColor: "#396EFF", 
              color: "tan", 
              boxShadow: "5px 10px 18px #888888", 
              fontWeight: "bold"}} 

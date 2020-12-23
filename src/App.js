@@ -4,7 +4,8 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import About from "./components/About"
 import Contacts from "./components/Contacts"
 import Portfolio from "./components/Portfolio"
-// import Popup from "./components/Popup"
+import Landing from "./components/Home"
+
 
 
 
@@ -19,7 +20,7 @@ function App() {
     <Route path="/about" component={About}/>
     <Route path="/contact-me" component={Contacts}/>
     <Route path="/projects" component={Portfolio}/>
-    {/* <Route path="/popup" component={Popup}/> */}
+    <Route path="/landing" component={Landing}/>
 
 
 

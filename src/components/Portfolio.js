@@ -98,7 +98,12 @@ const [openPopup, setOpenPopup] = useState(false)
        <Typography  variant="h4" className={classes.gridTitle}>My Projects</Typography>
 
 
-    <Grid container spacing={2} >
+    <Grid spacing={2} 
+    container
+  direction="row"
+  justify="center"
+  alignItems="center"
+    >
 
       {
         portfolioItems.map((lsItem, key) => (
@@ -128,7 +133,6 @@ const [openPopup, setOpenPopup] = useState(false)
         <Button size="small" color="primary" className={classes.field}
         onClick = {() => setOpenPopup(true)}
         >
-          {/* <ComputerIcon className={classes.projectsIcons} /> */}
           Demo
         </Button>
         <Button size="small" color="primary"  className={classes.field}>

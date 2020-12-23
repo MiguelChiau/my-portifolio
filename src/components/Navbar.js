@@ -25,6 +25,7 @@ import avatar from "../images/avatar.JPG"
 import {makeStyles} from "@material-ui/core/styles"
 import MobileMenuSlider from "@material-ui/core/Drawer"
 import myResume from "../MiguelChiauResume.pdf"
+import Landing from "./Home"
 
 
 import {Link} from "react-router-dom"
@@ -34,7 +35,8 @@ import Footer from "./Footer"
 const useStyles = makeStyles(theme=>({
     menuSliderContainer: {
         width: "100%",
-        background: "#222",
+        // background: "#222",
+        background: "#fff",
         height: "100%"
     },
 
@@ -47,7 +49,10 @@ const useStyles = makeStyles(theme=>({
     },
 
     ListItem: {
-      color: "tan"  
+    //   color: "tan"
+      color: "#666666"  
+
+
     }
 }))
 
@@ -88,22 +93,11 @@ export const Navbar = () => {
             <Divider/>
             <List>
 
-                 {/* {menuItems.map((lsItem, key) =>(
-                    <ListItem button key={key} component={Link} to={lsItem.ListPath}>
-                    <ListItemIcon className={classes.ListItem}>
-                        {lsItem.ListIcon}
-                    </ListItemIcon>
-                    <ListItemText className={classes.ListItem} primary={lsItem.ListText}/>
-                </ListItem>
-
-
-                ))} */}
-
-                 <ListItem button component={Link} to="/">
+                 <ListItem button component={Link} to="/landing">
                     <ListItemIcon className={classes.ListItem}>
                         <Home/>
                     </ListItemIcon>
-                    <ListItemText className={classes.ListItem} primary="Home"/>
+                    <ListItemText className={classes.ListItem} primary="Home" />
                 </ListItem>
 
                  <ListItem button component={Link} to="/about">
@@ -138,13 +132,13 @@ export const Navbar = () => {
     return (
         <>
         <Box component="nav">
-            <AppBar position="sticky" style={{background: "#222", position: "fixed"}}>
+            <AppBar position="sticky" style={{background: "#666666", position: "fixed"}}>
                 <Toolbar>
                     <IconButton onClick={toggleSlider("right", true)}>
-                    <ArrowBack style={{color: "tomato"}}/>
+                    <ArrowBack style={{color: "#fff"}}/>
                     {/* <Typography variant="h5" style={{color: "tan"}}>Portfolio</Typography> */}
                     </IconButton>
-                    <Typography variant="h5" style={{color: "tan"}}>Portfolio</Typography>
+                    <Typography variant="h5" style={{color: "#eeeeee"}}>Portfolio</Typography>
                     <MobileMenuSlider anchor="right" open={state.right} onClose={toggleSlider("right", false)}>
                         {sideList("right")}
                         <Footer/>

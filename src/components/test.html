@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+  margin: 0px;
+  background: #1e242a;
+}
+
+#main {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+
+#box1 {
+  width: 530px;
+  height: 625px;
+  background-image: url("../images/one.png");
+  position: absolute;
+  bottom: -100%;
+  left: 30%;
+  animation: anim 2s forwards, anim2 3s forwards 3s;
+}
+
+#box1:after {
+  content: " ";
+  position: absolute;
+  width: 530px;
+  height: 625px;
+  background-image: url("../images/two.png");
+  left: 0px;
+  z-index: -1;
+}
+
+@keyframes anim {
+  from {
+    bottom: -100%;
+  }
+  to {
+    bottom: 0px;
+  }
+}
+
+@keyframes anim2 {
+  from {
+    left: 30%;
+    width: 530px;
+  }
+  to {
+    left: 50%;
+    width: 0px;
+  }
+}
+
+#box2 {
+  width: auto;
+  height: auto;
+  /* font-family: "Bahnschrift Condensed"; */
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 10em;
+  font-weight: 500;
+  line-height: 130px;
+  position: absolute;
+  top: 250px;
+  left: 100px;
+  overflow: hidden;
+}
+
+#text {
+  position: relative;
+  left: -100%;
+  animation: anim3 2s forwards 3s;
+}
+
+@keyframes anim3 {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0%;
+  }
+}
+
+#box3 {
+  overflow: hidden;
+}
+
+#container {
+  width: 100px;
+  position: absolute;
+  top: -100%;
+  animation: anim4 2s forwards 2.5s;
+}
+
+#logo {
+  float: left;
+  margin-left: 100px;
+  margin-right: 20px;
+}
+
+
+
+#logo img{
+    width: 50px;
+}
+
+#menu {
+  /* font-family: "Behnschrift Condensed"; */
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: white;
+  letter-spacing: 2px;
+  margin-right: 150px;
+  margin-top: 20px;
+  float: right;
+}
+
+#menu ul {
+  list-style: none;
+}
+
+#menu ul li {
+  display: inline-block;
+  margin-left: 100px;
+}
+
+
+
+@keyframes anim4 {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0%;
+  }
+}
+
+</style>
+
+
+
+
+</head>
+<body>
+    <div id="main">
+        <div id="box1"></div>
+    
+        <div id="box2">
+            <div id="text">
+                Extreme <br> UI Design
+            </div>
+        </div>
+
+
+        <div id="box3">
+            <div id="container">
+
+                <div id="logo">
+                    <img src="../images/git.png" />
+                </div>
+        
+                <div id="menu">
+                    <ul >
+                        <li>Home</li>
+                        <li>Services</li>
+                        <li>About</li>
+                        <li>Contact</li>
+                        <li>Help</li>
+                    </ul>
+                </div>
+        
+        
+        
+            </div>
+        
+        </div>
+    </div>
+    
+</body>
+</html>
