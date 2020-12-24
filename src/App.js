@@ -16,11 +16,10 @@ function App() {
   return (
     <>
     <CssBaseline/>
-    <Route exact path="/" component={Home}/>
+    <Route exact path="/" component={Landing}/>
     <Route path="/about" component={About}/>
     <Route path="/contact-me" component={Contacts}/>
     <Route path="/projects" component={Portfolio}/>
-    <Route path="/landing" component={Landing}/>
 
 
 

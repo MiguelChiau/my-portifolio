@@ -13,6 +13,8 @@ Typography,
 Box
 } from "@material-ui/core"
 
+import Button from '@material-ui/core/Button';
+
 import {
 ArrowBack,
 AssignmentInd,
@@ -26,6 +28,7 @@ import {makeStyles} from "@material-ui/core/styles"
 import MobileMenuSlider from "@material-ui/core/Drawer"
 import myResume from "../MiguelChiauResume.pdf"
 import Landing from "./Home"
+import GetAppIcon from '@material-ui/icons/GetApp';
 
 
 import {Link} from "react-router-dom"
@@ -93,7 +96,7 @@ export const Navbar = () => {
             <Divider/>
             <List>
 
-                 <ListItem button component={Link} to="/landing">
+                 <ListItem button component={Link} to="/">
                     <ListItemIcon className={classes.ListItem}>
                         <Home/>
                     </ListItemIcon>
@@ -121,6 +124,19 @@ export const Navbar = () => {
                     </ListItemIcon>
                     <ListItemText className={classes.ListItem} primary="Contact me"/>
                 </ListItem>
+
+                
+                 <Button variant="contained" 
+                 className={classes.ListItem}
+                 style={{
+                backgroundColor: "#666666",
+                color: "white",
+                display: "flex",
+                justifyContent: "center"}}
+                target="_blank" href={myResume}>
+                 <GetAppIcon/>
+               Resume
+              </Button>
 
                
                 

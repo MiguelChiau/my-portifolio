@@ -11,12 +11,6 @@ import img7 from "../images/wordpress.png"
 import img8 from "../images/git.png"
 
 
-
-
-
-
-
-
 import Typed from "react-typed"
 import {makeStyles} from "@material-ui/core/styles"
 import NavBar from "./Navbar"
@@ -34,14 +28,7 @@ const useStyles = makeStyles(theme => ({
 
     },
 
-    title: {
-        color: "tomato",
-        // padding: theme.spacing(2),
-        textAlign: "center",
-        color: theme.palette.text.secondary,
-        background: "#fff",
-        boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)"
-    },
+    
     subtitle: {
         color: "tan",
         marginBottom: "3rem"
@@ -68,7 +55,6 @@ const useStyles = makeStyles(theme => ({
         padding: theme.spacing(2),
         textAlign: "center",
         background: "#fff",
-        // background: "green",
         marginTop: "100px"
     },
      skillSection: {
@@ -92,6 +78,18 @@ const useStyles = makeStyles(theme => ({
         marginRight: "auto"
 
     },
+
+    gridAbout: {
+        width: "100%",
+        margin: "0px",
+        marginTop: "90px"
+    },
+    paperAbout: {
+        padding: theme.spacing(2),
+        // textAlign: "center",
+        color: theme.palette.text.secondary,
+        // background: theme.palette.success.light
+    }
 
 
 }))
@@ -134,24 +132,26 @@ const About = () => {
             <Box className={classes.mainContainer}>
 
 
-            <Grid container 
+            {/* <Grid container 
             spacing={2}
             direction="row"
             justify="center"
             alignItems="center"
-            className={classes.grid}
-            >
+            // className={classes.grid}
+            > */}
 
         
-                <Grid item xs={12} md={6} style={{textAlign: "center"}}>
-                    <Paper className={classes.profile}>
-                    <Avatar className={classes.avatar} variant="square" src={avatar} alt="Miguel Chiau"/>
-                    </Paper>
-                </Grid>
 
-                <Grid item xs={12} md={6} style={{textAlign: "center"}}>
-                    <Paper>
-                        <Typography className={classes.title} variant="h5">
+                <Grid container spacing={2} className={classes.gridAbout}>
+                    <Grid item item md={6} sm={6} xs={12}>
+                        <Paper className={classes.paperAbout}>
+                             <Avatar className={classes.avatar} variant="square" src={avatar} alt="Miguel Chiau"/>
+                            {/* ONE */}
+                        </Paper>
+                    </Grid>
+                    <Grid item md={6} sm={6} xs={12}>
+                        <Paper className={classes.paperAbout}>
+                            <Typography className={classes.title} variant="h5">
                          <p>
                              Hi, I'm Miguel Chiau.
                         </p>
@@ -163,17 +163,13 @@ const About = () => {
                       <p>I was born and raised in Mozambique, South-East Africa, I came to Canada in 2016</p>
                       <p>I speak four languages: English, Portuguese, Shangaan and Spanish.</p>
                         </Typography>
-                        
-                        
-                      
-                    </Paper>
-                    
-                    
+                        </Paper>
+                    </Grid>
                 </Grid>
 
 
 
-                <Grid item xs={12} md={6} style={{textAlign: "center"}}>
+                <Grid item xs={12} md={12} style={{textAlign: "center"}} >
 
                     <Typography  variant="h4">
                         Skills
@@ -194,7 +190,6 @@ const About = () => {
                 </Grid>
                 
 
-            </Grid>
 
             </Box>
 

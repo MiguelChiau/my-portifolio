@@ -14,8 +14,8 @@ const useStyles = makeStyles((theme) => ({
     paper: {
         padding: theme.spacing(2),
         textAlign: "center",
-        color: theme.palette.text.secondary,
-        background: theme.palette.success.light,
+        color: "#fff",
+        background: "#666666",
         position: "relative",
         left: "-100%",
         animation: "anim3 2s forwards 3s",
@@ -62,7 +62,7 @@ export default function Home() {
     
                     <Grid container className={classes.grid}>
                          <Grid xs={6} md={6} className={classes.Box2}>
-                              <Paper className={classes.paper} >Miguel Chiau</Paper>
+                              <Paper className={classes.paper} >Hi, I'm Miguel Chiau</Paper>
                          </Grid>
                     </Grid>
 
