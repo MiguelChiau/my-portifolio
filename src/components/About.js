@@ -30,21 +30,17 @@ const useStyles = makeStyles(theme => ({
 
     
     subtitle: {
-        // marginBottom: "3rem",
         fontWeight: "bold"
-
 
     },
     mainContainer: {
         background: "#fff",
         height: "100vh",
 
-
     },
     grid: {
         width: "100%",
         margin: "0px",
-        // height: "600px",
     },
 
     paper: {
@@ -88,9 +84,7 @@ const useStyles = makeStyles(theme => ({
     },
     paperAbout: {
         padding: theme.spacing(2),
-        // textAlign: "center",
         color: theme.palette.text.secondary,
-        // background: theme.palette.success.light
     },
     paperTitle: {
         textAlign: "center",
@@ -137,95 +131,75 @@ const About = () => {
 
             <Box className={classes.mainContainer}>
 
-
-            {/* <Grid container 
-            spacing={2}
-            direction="row"
-            justify="center"
-            alignItems="center"
-            // className={classes.grid}
-            > */}
- 
-        
-
                 <Grid container spacing={2} className={classes.gridAbout}>
+
                     <Grid item item md={12} sm={12} xs={12} className={classes.paperTitle}>
                         <Typography className={classes.subtitle} variant="h5">
-                <Typed strings={["Web Developer", "Front-end Developer", "Full-stack Developer"]} 
-                typeSpeed={40}
-                backSpeed={60}
-                loop/>
-            </Typography>
+                            <Typed strings={["Web Developer", "Front-end Developer", "Full-stack Developer"]} 
+                            typeSpeed={40}
+                            backSpeed={60}
+                            loop/>
+                        </Typography>
+                    </Grid>
+
+                    <Grid container spacing={2}>
+                        <Grid item item md={6} sm={6} xs={12}>
+                            <Avatar className={classes.avatar} variant="round" src={avatar} alt="Miguel Chiau"/>
+                        </Grid>
+
+                       <Grid item item md={6} sm={6} xs={12}>
+                           <Paper className={classes.paperAbout}>
+                                <Typography className={classes.title} variant="h5" >
+                                    <p style={{textAlign: "center", fontWeight: "bold"}}>
+                                         Hi, I'm Miguel Chiau. Nice to meet you!
+                                    </p>
+                                    <p>
+                                       In April 2020 I graduated from Quest University Canada with a dual Bachelor of Arts and Sciences.
+                                       I'm also a graduate from BrainStation Web Development diploma program.
+                                    </p>
+                                    <p style={{textAlign: "center", fontWeight: "bold"}}>Random facts about me</p>
+
+                                    <ul>
+                                        <li>
+                                            I was born and raised in Mozambique, South-East Africa, I moved to Canada in 2016
+                                        </li>
+                                        <li>
+                                            I speak four languages: English, Portuguese, Shangaan and Spanish.
+                                        </li>
+                                    </ul>
+                                </Typography>
+                            </Paper>
+                         </Grid>
 
                     </Grid>
-                    <Grid item item md={6} sm={6} xs={12}>
-                        
-                        <Paper className={classes.paperAbout}>
-                             <Avatar className={classes.avatar} variant="square" src={avatar} alt="Miguel Chiau"/>
-                            {/* ONE */}
-                        </Paper>
-                    </Grid>
-                    <Grid item md={6} sm={6} xs={12}>
-                        <Paper className={classes.paperAbout}>
-                            <Typography className={classes.title} variant="h5">
-                         <p style={{textAlign: "center", fontWeight: "bold"}}>
-                             Hi, I'm Miguel Chiau. Nice to meet you!
-                        </p>
-                         <p>
-                             In April 2020 I graduated from Quest University Canada with a dual Bachelor of Arts and Sciences.
-                             I'm also a graduate from BrainStation Web Development diploma program.
-                         </p>
-                         <p style={{textAlign: "center", fontWeight: "bold"}}>Random facts about me</p>
-                         <ul>
-                             <li>
-                                 I was born and raised in Mozambique, South-East Africa, I came to Canada in 2016
-                             </li>
-                             <li>
-                                 I speak four languages: English, Portuguese, Shangaan and Spanish.
-                             </li>
-                         </ul>
-                      
-                        </Typography>
-                        </Paper>
-                    </Grid>
+
+
                 </Grid>
 
 
 
-                <Grid item xs={12} md={12} style={{textAlign: "center"}} >
-
+                <Grid item xs={12} md={6} style={{textAlign: "center", marginLeft: "auto", marginRight: "auto", marginTop: "20px"}} >
                     <Typography  variant="h4">
                         Skills
                     </Typography>
 
                     <Grid container spacing={2} className={classes.skills} style={{textAlign: "center"}}>
-                    {
-                    skillsItems.map((lsItem, key) => (
-                        <Grid key={key} item xs={6} md={3} style={{textAlign: "center"}}>
-                        <Paper className={classes.skillSection}>
-                            <Avatar className={classes.skillsImgs} variant="square" src={lsItem.skillIcon} alt=""/>
-                         </Paper>
-                       </Grid>
-                    ))
-                    }
+                         {
+                            skillsItems.map((lsItem, key) => (
+                            <Grid key={key} item xs={6} md={3} style={{textAlign: "center"}}>
+                                 <Paper className={classes.skillSection}>
+                                      <Avatar className={classes.skillsImgs} variant="square" src={lsItem.skillIcon} alt=""/>
+                                 </Paper>
+                            </Grid>
+                        ))
+                        }
                     </Grid>
 
                 </Grid>
                 
-
-
             </Box>
 
-
-            
-
-
-
-            
-
-
         </>
-        
        
     )
 }
