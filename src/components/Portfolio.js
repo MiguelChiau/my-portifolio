@@ -11,6 +11,11 @@ import Grid from '@material-ui/core/Grid';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import ComputerIcon from '@material-ui/icons/Computer';
 import Popup from "./Popup"
+import Popup2 from "./Popup2"
+import Popup3 from "./Popup3"
+import Popup4 from "./Popup4"
+
+
 import {Link} from "react-router-dom"
 
 
@@ -57,37 +62,17 @@ field: {
 })
 )
 
-const portfolioItems = [
-  {
-    media: pg,
-    title: "Netflix Clone",
-    description: "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica"
-  },
-   {
-    media: pg,
-    title: "My Portfolio",
-    description: "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica"
-  },
-  {
-    media: pg,
-    title: "Band Site",
-    description: "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica"
-  },
-  {
-    media: pg,
-    title: "Video site",
-    description: "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica"
-  }
-]
-
-
-
 
  const Portfolio = () => {
   const classes = useStyles();
 
   //The Modal
 const [openPopup, setOpenPopup] = useState(false)
+const [openPopup2, setOpenPopup2] = useState(false)
+const [openPopup3, setOpenPopup3] = useState(false)
+const [openPopup4, setOpenPopup4] = useState(false)
+
+
 
 
   return (
@@ -105,26 +90,25 @@ const [openPopup, setOpenPopup] = useState(false)
   alignItems="center"
     >
 
-      {
-        portfolioItems.map((lsItem, key) => (
+      
 
-      <Grid key={key} item xs={12} md={6} className={classes.innerGrid}>
+      <Grid  item xs={12} md={6} className={classes.innerGrid}>
         <Card className={classes.card}>
 
           <CardActionArea>
              <CardMedia
                 className={classes.media}
-                image={lsItem.media}
+                image={pg}
                 title="Contemplative Reptile"
              />
 
           <CardContent>
              <Typography gutterBottom variant="h5" component="h2">
-               {lsItem.title}
+               Netflix Clone
             </Typography>
 
             <Typography variant="body2" color="textSecondary" component="p">
-              {lsItem.description}
+              Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica
             </Typography>
           </CardContent>
       </CardActionArea>
@@ -142,22 +126,134 @@ const [openPopup, setOpenPopup] = useState(false)
 
     </Card>
     </Grid>
+
+    <Grid  item xs={12} md={6} className={classes.innerGrid}>
+        <Card className={classes.card}>
+
+          <CardActionArea>
+             <CardMedia
+                className={classes.media}
+                image={pg}
+                title="Contemplative Reptile"
+             />
+
+          <CardContent>
+             <Typography gutterBottom variant="h5" component="h2">
+               Portfolio Site
+            </Typography>
+
+            <Typography variant="body2" color="textSecondary" component="p">
+              Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica
+            </Typography>
+          </CardContent>
+      </CardActionArea>
+
+      <CardActions >
+        <Button size="small" color="primary" className={classes.field}
+        onClick = {() => setOpenPopup2(true)}
+        >
+          Demo
+        </Button>
+        <Button size="small" color="primary"  className={classes.field}>
+          <GitHubIcon className={classes.projectsIcons} /> Source Code
+        </Button>
+      </CardActions>
+
+    </Card>
+    </Grid>
+
+    <Grid  item xs={12} md={6} className={classes.innerGrid}>
+        <Card className={classes.card}>
+
+          <CardActionArea>
+             <CardMedia
+                className={classes.media}
+                image={pg}
+                title="Contemplative Reptile"
+             />
+
+          <CardContent>
+             <Typography gutterBottom variant="h5" component="h2">
+               Band Site
+            </Typography>
+
+            <Typography variant="body2" color="textSecondary" component="p">
+              Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica
+            </Typography>
+          </CardContent>
+      </CardActionArea>
+
+      <CardActions >
+        <Button size="small" color="primary" className={classes.field}
+        onClick = {() => setOpenPopup3(true)}
+        >
+          Demo
+        </Button>
+        <Button size="small" color="primary"  className={classes.field}>
+          <GitHubIcon className={classes.projectsIcons} /> Source Code
+        </Button>
+      </CardActions>
+
+    </Card>
+    </Grid>
+
+
+    <Grid  item xs={12} md={6} className={classes.innerGrid}>
+        <Card className={classes.card}>
+
+          <CardActionArea>
+             <CardMedia
+                className={classes.media}
+                image={pg}
+                title="Contemplative Reptile"
+             />
+
+          <CardContent>
+             <Typography gutterBottom variant="h5" component="h2">
+               Videos Site
+            </Typography>
+
+            <Typography variant="body2" color="textSecondary" component="p">
+              Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica
+            </Typography>
+          </CardContent>
+      </CardActionArea>
+
+      <CardActions >
+        <Button size="small" color="primary" className={classes.field}
+        onClick = {() => setOpenPopup4(true)}
+        >
+          Demo
+        </Button>
+        <Button size="small" color="primary"  className={classes.field}>
+          <GitHubIcon className={classes.projectsIcons} /> Source Code
+        </Button>
+      </CardActions>
+
+    </Card>
+    </Grid>
+
+    
             
-        ))
-      }
+        
 
     </Grid>
     </Grid>
 
-    <Popup
-    openPopup={openPopup}
-    setOpenPopup={setOpenPopup}
-    >
+    <Popup openPopup={openPopup} setOpenPopup={setOpenPopup}></Popup>
 
-    </Popup>
+    <Popup2 openPopup2={openPopup2} setOpenPopup2={setOpenPopup2}></Popup2>
+
+    <Popup3 openPopup3={openPopup3} setOpenPopup3={setOpenPopup3}></Popup3>
+
+    <Popup4 openPopup4={openPopup4} setOpenPopup4={setOpenPopup4}></Popup4>
+
 
     </>
   );
 }
 
 export default Portfolio
+
+
+
