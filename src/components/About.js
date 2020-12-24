@@ -30,8 +30,10 @@ const useStyles = makeStyles(theme => ({
 
     
     subtitle: {
-        color: "tan",
-        marginBottom: "3rem"
+        // marginBottom: "3rem",
+        fontWeight: "bold"
+
+
     },
     mainContainer: {
         background: "#fff",
@@ -89,6 +91,10 @@ const useStyles = makeStyles(theme => ({
         // textAlign: "center",
         color: theme.palette.text.secondary,
         // background: theme.palette.success.light
+    },
+    paperTitle: {
+        textAlign: "center",
+        fontWeight: "bold"
     }
 
 
@@ -139,11 +145,21 @@ const About = () => {
             alignItems="center"
             // className={classes.grid}
             > */}
-
+ 
         
 
                 <Grid container spacing={2} className={classes.gridAbout}>
+                    <Grid item item md={12} sm={12} xs={12} className={classes.paperTitle}>
+                        <Typography className={classes.subtitle} variant="h5">
+                <Typed strings={["Web Developer", "Front-end Developer", "Full-stack Developer"]} 
+                typeSpeed={40}
+                backSpeed={60}
+                loop/>
+            </Typography>
+
+                    </Grid>
                     <Grid item item md={6} sm={6} xs={12}>
+                        
                         <Paper className={classes.paperAbout}>
                              <Avatar className={classes.avatar} variant="square" src={avatar} alt="Miguel Chiau"/>
                             {/* ONE */}
@@ -152,16 +168,23 @@ const About = () => {
                     <Grid item md={6} sm={6} xs={12}>
                         <Paper className={classes.paperAbout}>
                             <Typography className={classes.title} variant="h5">
-                         <p>
-                             Hi, I'm Miguel Chiau.
+                         <p style={{textAlign: "center", fontWeight: "bold"}}>
+                             Hi, I'm Miguel Chiau. Nice to meet you!
                         </p>
                          <p>
                              In April 2020 I graduated from Quest University Canada with a dual Bachelor of Arts and Sciences.
                              I'm also a graduate from BrainStation Web Development diploma program.
                          </p>
-                         <p>Random facts about me</p>
-                      <p>I was born and raised in Mozambique, South-East Africa, I came to Canada in 2016</p>
-                      <p>I speak four languages: English, Portuguese, Shangaan and Spanish.</p>
+                         <p style={{textAlign: "center", fontWeight: "bold"}}>Random facts about me</p>
+                         <ul>
+                             <li>
+                                 I was born and raised in Mozambique, South-East Africa, I came to Canada in 2016
+                             </li>
+                             <li>
+                                 I speak four languages: English, Portuguese, Shangaan and Spanish.
+                             </li>
+                         </ul>
+                      
                         </Typography>
                         </Paper>
                     </Grid>

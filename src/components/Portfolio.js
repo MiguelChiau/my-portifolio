@@ -60,22 +60,22 @@ field: {
 const portfolioItems = [
   {
     media: pg,
-    title: "Project-1",
+    title: "Netflix Clone",
     description: "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica"
   },
    {
     media: pg,
-    title: "Project-1",
+    title: "My Portfolio",
     description: "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica"
   },
   {
     media: pg,
-    title: "Project-1",
+    title: "Band Site",
     description: "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica"
   },
   {
     media: pg,
-    title: "Project-1",
+    title: "Video site",
     description: "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica"
   }
 ]

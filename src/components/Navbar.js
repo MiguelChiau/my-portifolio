@@ -14,6 +14,7 @@ Box
 } from "@material-ui/core"
 
 import Button from '@material-ui/core/Button';
+import Logo from "../images/code.png"
 
 import {
 ArrowBack,
@@ -46,8 +47,8 @@ const useStyles = makeStyles(theme=>({
     avatar:{
         display: "block",
         margin: "0.5rem auto",
-        width: theme.spacing(13),
-        height: theme.spacing(13)
+        width: theme.spacing(5),
+        height: theme.spacing(5)
 
     },
 
@@ -92,7 +93,7 @@ export const Navbar = () => {
 
     const sideList = slider => (
          <Box className={classes.menuSliderContainer} component="div" onClick={toggleSlider(slider, false)}>
-            <Avatar className={classes.avatar} src={avatar} alt=""/>
+            <Avatar className={classes.avatar} src={Logo} alt=""/>
             <Divider/>
             <List>
 
