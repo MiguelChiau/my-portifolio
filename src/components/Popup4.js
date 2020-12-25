@@ -15,7 +15,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import ComputerIcon from '@material-ui/icons/Computer';
 
-import demo from "../videos/preview 2.mp4"
+import demo from "../videos/brainflix.mp4"
 import VideoPlayer from 'react-video-js-player';
 import pg from "../images/net.jpg"
 
