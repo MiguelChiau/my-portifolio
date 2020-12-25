@@ -21,7 +21,11 @@ import {Link} from "react-router-dom"
 
 
 import NavBar from "./Navbar"
-import pg from "../images/net.jpg"
+import pg from "../images/netflix-hero.png"
+import pg1 from "../images/port.png"
+import pg2 from "../images/band.png"
+import pg3 from "../images/brain-flix.png"
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -31,7 +35,9 @@ const useStyles = makeStyles((theme) => ({
   },
 
   media: {
-    height: 170
+    // height: 170
+    height: "200px"
+
   },
 
   gridTitle: {
@@ -108,7 +114,7 @@ const [openPopup4, setOpenPopup4] = useState(false)
             </Typography>
 
             <Typography variant="body2" color="textSecondary" component="p">
-              Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica
+              A clone of the canadian version of Netflix. The web app includes: landing page, login, dashboard and the main browsing page where movie trailers can be viewed.
             </Typography>
           </CardContent>
       </CardActionArea>
@@ -119,8 +125,10 @@ const [openPopup4, setOpenPopup4] = useState(false)
         >
           Demo
         </Button>
-        <Button size="small" color="primary"  className={classes.field}>
-          <GitHubIcon className={classes.projectsIcons} /> Source Code
+        <Button size="small" color="primary"  className={classes.field}
+        target="_blank"
+        href="https://github.com/MiguelChiau/netflix-clone">
+          <GitHubIcon className={classes.projectsIcons}/> Source Code
         </Button>
       </CardActions>
 
@@ -133,7 +141,7 @@ const [openPopup4, setOpenPopup4] = useState(false)
           <CardActionArea>
              <CardMedia
                 className={classes.media}
-                image={pg}
+                image={pg1}
                 title="Contemplative Reptile"
              />
 
@@ -143,7 +151,7 @@ const [openPopup4, setOpenPopup4] = useState(false)
             </Typography>
 
             <Typography variant="body2" color="textSecondary" component="p">
-              Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica
+              This very Portfolio website, is a web application I designed and built from the ground up using React.js
             </Typography>
           </CardContent>
       </CardActionArea>
@@ -151,6 +159,44 @@ const [openPopup4, setOpenPopup4] = useState(false)
       <CardActions >
         <Button size="small" color="primary" className={classes.field}
         onClick = {() => setOpenPopup2(true)}
+        >
+          Demo
+        </Button>
+        <Button size="small" color="primary"  className={classes.field}
+        target="_blank"
+        href="https://github.com/MiguelChiau/my-portifolio"
+        >
+          <GitHubIcon className={classes.projectsIcons} /> Source Code
+        </Button>
+      </CardActions>
+
+    </Card>
+    </Grid>
+
+     <Grid  item xs={12} md={6} className={classes.innerGrid}>
+        <Card className={classes.card}>
+
+          <CardActionArea>
+             <CardMedia
+                className={classes.media}
+                image={pg3}
+                title="Contemplative Reptile"
+             />
+
+          <CardContent>
+             <Typography gutterBottom variant="h5" component="h2">
+               BrainFlix
+            </Typography>
+
+            <Typography variant="body2" color="textSecondary" component="p">
+              BrainFlix is a prototype for a videos' streaming platform with dynamic front end data from an API. 
+            </Typography>
+          </CardContent>
+      </CardActionArea>
+
+      <CardActions >
+        <Button size="small" color="primary" className={classes.field}
+        onClick = {() => setOpenPopup4(true)}
         >
           Demo
         </Button>
@@ -168,7 +214,7 @@ const [openPopup4, setOpenPopup4] = useState(false)
           <CardActionArea>
              <CardMedia
                 className={classes.media}
-                image={pg}
+                image={pg2}
                 title="Contemplative Reptile"
              />
 
@@ -178,7 +224,7 @@ const [openPopup4, setOpenPopup4] = useState(false)
             </Typography>
 
             <Typography variant="body2" color="textSecondary" component="p">
-              Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica
+              Website for a band, featuring a biography page and a shows' page with dates and locations. 
             </Typography>
           </CardContent>
       </CardActionArea>
@@ -198,40 +244,7 @@ const [openPopup4, setOpenPopup4] = useState(false)
     </Grid>
 
 
-    <Grid  item xs={12} md={6} className={classes.innerGrid}>
-        <Card className={classes.card}>
-
-          <CardActionArea>
-             <CardMedia
-                className={classes.media}
-                image={pg}
-                title="Contemplative Reptile"
-             />
-
-          <CardContent>
-             <Typography gutterBottom variant="h5" component="h2">
-               Videos Site
-            </Typography>
-
-            <Typography variant="body2" color="textSecondary" component="p">
-              Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica
-            </Typography>
-          </CardContent>
-      </CardActionArea>
-
-      <CardActions >
-        <Button size="small" color="primary" className={classes.field}
-        onClick = {() => setOpenPopup4(true)}
-        >
-          Demo
-        </Button>
-        <Button size="small" color="primary"  className={classes.field}>
-          <GitHubIcon className={classes.projectsIcons} /> Source Code
-        </Button>
-      </CardActions>
-
-    </Card>
-    </Grid>
+   
 
     
             

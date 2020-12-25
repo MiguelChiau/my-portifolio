@@ -17,7 +17,7 @@ import ComputerIcon from '@material-ui/icons/Computer';
 
 import demo from "../videos/bandsite.mp4"
 import VideoPlayer from 'react-video-js-player';
-import pg from "../images/net.jpg"
+import pg from "../images/band.png"
 
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -68,14 +68,16 @@ const classes = useStyles();
                           Band Site
                      </Typography>
                      <Typography variant="body2" color="textSecondary" component="p">
-                         Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                         across all continents except Antarctica
+                         This website features two pages and a comments' section that 
+                         allows users to type in a comment.
                      </Typography>
                 </CardContent>
              </CardActionArea>
 
             <CardActions>
-                   <Button size="small" color="primary">
+                   <Button size="small" color="primary"
+                   target="_blank"
+                   href="https://miguelchiau.github.io/band-site/">
                        <ComputerIcon style={{paddingRight: "5px"}} />
                         View Live Preview
                    </Button>

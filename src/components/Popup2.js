@@ -17,7 +17,7 @@ import ComputerIcon from '@material-ui/icons/Computer';
 
 import demo from "../videos/bandsite.mp4"
 import VideoPlayer from 'react-video-js-player';
-import pg from "../images/net.jpg"
+import pg from "../images/port.png"
 
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -68,15 +68,16 @@ const classes = useStyles();
                           Portfolio Site
                      </Typography>
                      <Typography variant="body2" color="textSecondary" component="p">
-                         Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                         across all continents except Antarctica
+                         This portfolio site is single page web application built with React.js and material UI 
+                         and features a contact form connected to a firebase.
                      </Typography>
                 </CardContent>
              </CardActionArea>
 
             <CardActions>
                    <Button size="small" color="primary">
-                       <ComputerIcon style={{paddingRight: "5px"}} />
+                       <ComputerIcon style={{paddingRight: "5px"}} 
+                       />
                         View Live Preview
                    </Button>
             </CardActions>

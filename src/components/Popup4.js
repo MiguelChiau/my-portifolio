@@ -17,7 +17,7 @@ import ComputerIcon from '@material-ui/icons/Computer';
 
 import demo from "../videos/brainflix.mp4"
 import VideoPlayer from 'react-video-js-player';
-import pg from "../images/net.jpg"
+import pg from "../images/brainflix.png"
 
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -65,19 +65,20 @@ const classes = useStyles();
 
                  <CardContent>
                      <Typography gutterBottom variant="h5" component="h2">
-                          Portfolio Site
+                          BrainFlix
                      </Typography>
                      <Typography variant="body2" color="textSecondary" component="p">
-                         Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                         across all continents except Antarctica
+                         This web app is built with React.js and uses a back-end API build from the ground up to feed the front end data dynamically.
                      </Typography>
                 </CardContent>
              </CardActionArea>
 
             <CardActions>
-                   <Button size="small" color="primary">
+                   <Button size="small" color="primary"
+                   target="_blank"
+                   href="https://github.com/MiguelChiau/BrainFlix">
                        <ComputerIcon style={{paddingRight: "5px"}} />
-                        View Live Preview
+                        Source Code
                    </Button>
             </CardActions>
 
