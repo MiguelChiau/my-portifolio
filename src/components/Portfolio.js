@@ -21,9 +21,11 @@ import {Link} from "react-router-dom"
 
 
 import NavBar from "./Navbar"
-import pg from "../images/netflix-hero.png"
+// import pg from "../images/flix.png"
+import pg from "../images/netflix.png"
+
 import pg1 from "../images/port.png"
-import pg2 from "../images/band.png"
+import pg2 from "../images/band 2.png"
 import pg3 from "../images/brain-flix.png"
 
 
@@ -114,7 +116,8 @@ const [openPopup4, setOpenPopup4] = useState(false)
             </Typography>
 
             <Typography variant="body2" color="textSecondary" component="p">
-              A clone of the canadian version of Netflix. The web app includes: landing page, login, dashboard and the main browsing page where movie trailers can be viewed.
+              A clone of the canadian version of Netflix. The web app includes: a landing page, a login page, a profiles page 
+              and the main browsing page where movie trailers can be played.
             </Typography>
           </CardContent>
       </CardActionArea>
@@ -200,7 +203,9 @@ const [openPopup4, setOpenPopup4] = useState(false)
         >
           Demo
         </Button>
-        <Button size="small" color="primary"  className={classes.field}>
+        <Button size="small" color="primary"  className={classes.field}
+        target="_blank"
+        href="https://github.com/MiguelChiau/BrainFlix">
           <GitHubIcon className={classes.projectsIcons} /> Source Code
         </Button>
       </CardActions>
@@ -235,7 +240,9 @@ const [openPopup4, setOpenPopup4] = useState(false)
         >
           Demo
         </Button>
-        <Button size="small" color="primary"  className={classes.field}>
+        <Button size="small" color="primary"  className={classes.field}
+        target="_blank"
+        href="https://github.com/MiguelChiau/band-site">
           <GitHubIcon className={classes.projectsIcons} /> Source Code
         </Button>
       </CardActions>

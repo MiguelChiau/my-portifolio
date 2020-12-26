@@ -17,7 +17,7 @@ import ComputerIcon from '@material-ui/icons/Computer';
 
 import demo from "../videos/netflix-clone.mp4"
 import VideoPlayer from 'react-video-js-player';
-import pg from "../images/netflix-hero.png"
+// import pg from "../images/netflix-hero.png"
 
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -69,8 +69,8 @@ const classes = useStyles();
                      </Typography>
                      <Typography variant="body2" color="textSecondary" component="p">
                          This web app uses a movie database API, TMDB, to collect movies for the different categories
-                         on netflix and play their respective trailers using the Youtube Iframe player AP
-                         The app is build on React js and used styled components for the UI.
+                         on Netflix and play their respective trailers using the Youtube Iframe player API
+                         The app is build on React js and uses styled components for the UI.
                      </Typography>
                 </CardContent>
              </CardActionArea>

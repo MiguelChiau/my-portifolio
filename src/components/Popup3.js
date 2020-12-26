@@ -17,7 +17,7 @@ import ComputerIcon from '@material-ui/icons/Computer';
 
 import demo from "../videos/bandsite.mp4"
 import VideoPlayer from 'react-video-js-player';
-import pg from "../images/band.png"
+// import pg from "../images/band.png"
 
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -69,7 +69,7 @@ const classes = useStyles();
                      </Typography>
                      <Typography variant="body2" color="textSecondary" component="p">
                          This website features two pages and a comments' section that 
-                         allows users to type in a comment.
+                         allows users to post a comment.
                      </Typography>
                 </CardContent>
              </CardActionArea>

@@ -27,7 +27,9 @@ Info
 import avatar from "../images/avatar.JPG"
 import {makeStyles} from "@material-ui/core/styles"
 import MobileMenuSlider from "@material-ui/core/Drawer"
-import myResume from "../MiguelChiauResume.pdf"
+import myResume from "../MiguelChiau-New-Resume.pdf"
+// import myResume from "../MiguelChiau-Resume.pdf"
+
 import Landing from "./Home"
 import GetAppIcon from '@material-ui/icons/GetApp';
 
@@ -134,7 +136,8 @@ export const Navbar = () => {
                 color: "white",
                 display: "flex",
                 justifyContent: "center"}}
-                target="_blank" href={myResume}>
+                target="_blank" href={myResume}
+                >
                  <GetAppIcon/>
                Resume
               </Button>

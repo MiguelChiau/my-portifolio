@@ -30,7 +30,7 @@ const useStyles = makeStyles(theme => ({
 
     
     subtitle: {
-        fontWeight: "bold"
+        // fontWeight: "bold"
 
     },
     mainContainer: {
@@ -134,7 +134,7 @@ const About = () => {
                 <Grid container spacing={2} className={classes.gridAbout}>
 
                     <Grid item item md={12} sm={12} xs={12} className={classes.paperTitle}>
-                        <Typography className={classes.subtitle} variant="h5">
+                        <Typography className={classes.subtitle} variant="h4">
                             <Typed strings={["Web Developer", "Front-end Developer", "Full-stack Developer"]} 
                             typeSpeed={40}
                             backSpeed={60}
@@ -155,13 +155,15 @@ const About = () => {
                                     </p>
                                     <p>
                                        In April 2020 I graduated from Quest University Canada with a dual Bachelor of Arts and Sciences.
-                                       I'm also a graduate from BrainStation Web Development diploma program.
+                                       I'm also a graduate from BrainStation Web Development diploma program. I have a passion for coding and 
+                                       to build beautiful web applications. 
+        
                                     </p>
                                     <p style={{textAlign: "center", fontWeight: "bold"}}>Random facts about me</p>
 
                                     <ul>
                                         <li>
-                                            I was born and raised in Mozambique, South-East Africa, I moved to Canada in 2016
+                                            I was born and raised in Mozambique, South-East Africa, and I moved to Canada in 2016.
                                         </li>
                                         <li>
                                             I speak four languages: English, Portuguese, Shangaan and Spanish.

@@ -68,7 +68,7 @@ const classes = useStyles();
                           BrainFlix
                      </Typography>
                      <Typography variant="body2" color="textSecondary" component="p">
-                         This web app is built with React.js and uses a back-end API build from the ground up to feed the front end data dynamically.
+                         This web app is built with React.js and uses a back-end API built from the ground up to feed the front end with dynamic data.
                      </Typography>
                 </CardContent>
              </CardActionArea>

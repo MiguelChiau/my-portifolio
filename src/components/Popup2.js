@@ -15,7 +15,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import ComputerIcon from '@material-ui/icons/Computer';
 
-import demo from "../videos/bandsite.mp4"
+import demo from "../videos/portsite.mp4"
 import VideoPlayer from 'react-video-js-player';
 import pg from "../images/port.png"
 
@@ -68,8 +68,8 @@ const classes = useStyles();
                           Portfolio Site
                      </Typography>
                      <Typography variant="body2" color="textSecondary" component="p">
-                         This portfolio site is single page web application built with React.js and material UI 
-                         and features a contact form connected to a firebase.
+                         This portfolio site is a single page web application built with React.js and material UI 
+                         and features a contact form connected to firebase.
                      </Typography>
                 </CardContent>
              </CardActionArea>

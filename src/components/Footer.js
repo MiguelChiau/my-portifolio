@@ -6,7 +6,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import EmailIcon from '@material-ui/icons/Email';
 import {Link} from "react-router-dom"
 
-import myResume from "../MiguelChiauResume.pdf"
+// import myResume from "../MiguelChiauResume.pdf"
 
 
 const useStyles = withStyles({
@@ -37,6 +37,7 @@ const Footer = () => {
              <BottomNavigationAction className={classes.root} 
             style={{padding: "0", color: "#fff"}} 
             icon={<GitHubIcon/>}
+            target="_blank"
             href="https://github.com/MiguelChiau"
 
             />
@@ -47,13 +48,14 @@ const Footer = () => {
             <BottomNavigationAction style={classes.root} 
             style={{padding: "0", color: "#fff"}} 
             icon={<LinkedInIcon/>}
+            target="_blank"
              href="https://www.linkedin.com/in/miguel-chiau-b328b6ba/"
             />
 
             <BottomNavigationAction className={classes.root} 
             style={{padding: "0", color: "#fff"}} 
             icon={<EmailIcon className={classes.footerIcons} />}
-
+            target="_blank"
             href="mailto:chiau.miguel@gmail.com"
             />
 
