@@ -1,7 +1,8 @@
-### Portfolio Site
+# My Portfolio Site
 
-# Live Site
-https://miguelchiau.com/
+### [Live Site](https://miguelchiau.com/)
+
+![Portfolio Site](https://ibb.co/DfgjGcQ)
 
 
 
