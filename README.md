@@ -1,10 +1,17 @@
+### Portfolio Site
+
+# Live Site
+https://miguelchiau.com/
+
+
+https://ibb.co/DfgjGcQ
+
 # Summary
 
 I designed and built my portfolio website from the ground up using React.js.
 This portfolio site is a single page web application built with React and Material UI and features a home page, an about me page, a projects page and a contact page.
 
-# URL For Live Preview
-https://miguelchiau.com/
+
 
 
 # Getting Started with Create React App
