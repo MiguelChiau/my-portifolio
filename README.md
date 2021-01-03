@@ -4,7 +4,6 @@
 https://miguelchiau.com/
 
 
-https://ibb.co/DfgjGcQ
 
 # Summary
 
