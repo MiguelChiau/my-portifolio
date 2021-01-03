@@ -2,7 +2,7 @@
 
 ### [Live Site](https://miguelchiau.com/)
 
-![Portfolio Site](https://ibb.co/DfgjGcQ)
+![Portfolio Site](https://postimg.cc/cvQPPQ8J)
 
 
 
