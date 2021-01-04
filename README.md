@@ -5,6 +5,20 @@
 <img width="1440" alt="Screen Shot 2021-01-02 at 4 46 33 PM" src="https://user-images.githubusercontent.com/49828283/103492390-73c0e800-4ddf-11eb-9dc0-cc4037616244.png">
 
 
+<img width="1440" alt="Screen Shot 2021-01-03 at 4 52 18 PM" src="https://user-images.githubusercontent.com/49828283/103493102-49255e00-4de4-11eb-8b53-9c51e2275df7.png">
+
+<img width="1440" alt="Screen Shot 2021-01-03 at 4 52 31 PM" src="https://user-images.githubusercontent.com/49828283/103493128-678b5980-4de4-11eb-9c3c-8c9bc64b090a.png">
+
+
+<img width="1440" alt="Screen Shot 2021-01-03 at 4 52 49 PM" src="https://user-images.githubusercontent.com/49828283/103493139-72de8500-4de4-11eb-9a47-a55ba4612883.png">
+
+<img width="1440" alt="Screen Shot 2021-01-03 at 4 53 04 PM" src="https://user-images.githubusercontent.com/49828283/103493156-7d991a00-4de4-11eb-8154-ef2bf7e850fb.png">
+
+
+<img width="1440" alt="Screen Shot 2021-01-03 at 4 53 29 PM" src="https://user-images.githubusercontent.com/49828283/103493172-8853af00-4de4-11eb-8104-848c36402270.png">
+
+
+
 
 
 # Summary
