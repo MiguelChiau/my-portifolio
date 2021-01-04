@@ -2,7 +2,8 @@
 
 ### [Live Site](https://miguelchiau.com/)
 
-![Portfolio Site](https://postimg.cc/cvQPPQ8J)
+<img width="1440" alt="Screen Shot 2021-01-02 at 4 46 33 PM" src="https://user-images.githubusercontent.com/49828283/103492390-73c0e800-4ddf-11eb-9dc0-cc4037616244.png">
+
 
 
 
